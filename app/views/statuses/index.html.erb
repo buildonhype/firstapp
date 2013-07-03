@@ -6,12 +6,12 @@
 
 <% @statuses.each do |status| %>
 <div class="status">
-  <strong><%= status.name %></strong>
+  <strong>Name</strong>
   <p><%= status.content %></p>
   <div class="meta">
-    <%= link_to time_ago_in_words(status.created_at) + " ago", status %> |
+    <%= link_to time_ago_in_words(status.created_at) + " ago", status %>
     <span class="admin">
-      <%= link_to "Modifier", edit_status_path(status) %> |
+     | <%= link_to "Modifier", edit_status_path(status) %> |
       <%= link_to "Supprimer", status, method: :delete, data: {confirm: "Voulez-vous supprimer ce statut?"} %>
       </span>
   </div>
